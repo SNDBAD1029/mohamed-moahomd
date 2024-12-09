@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="تبع siginup.css"> <!-- ربط ملف الـ CSS -->
+</head>
+<body>
+  
+  <!-- الخلفية السوداء مع أيقونة التحميل -->
+  <div class="loading-container">
+    <div class="loader"></div> <!-- الأيقونة الجديدة -->
+  </div>
+
+
+   <!-- الـ Header مع القوائم -->
+   <div class="header">
+    <div class="menu">
+      <a href="login.html" class="menu-item" id="login">Login</a>
+      <a href="signup.html" class="menu-item" id="signup">Signup</a>
+      <a href="about.html" class="menu-item" id="about">About</a>
+    </div>
+
+    <head>
+      <!-- رابط مكتبة Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign Up</title>
+      <!-- ربط ملف CSS الخارجي -->
+      <link href="styles.css" rel="stylesheet" type="text/css">
+      <!-- رابط مكتبة Font Awesome للأيقونات -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+      <div class="container">
+    
+        <div class="text">
+          Sign up
+        </div>
+    
+        <form action="server.js" method="POST">
+    
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" name="first_name" required>
+              <div class="underline"></div>
+              <label for="">Your first name</label>
+            </div>
+    
+            <div class="input-data">
+              <input type="text" name="second_name" required>
+              <div class="underline"></div>
+              <label for="">Your second name</label>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="input-data">
+              <input type="email" name="email" required>
+              <div class="underline"></div>
+              <label for="">Write your email</label>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="input-data">
+              <input type="password" id="password" name="password" required>
+              <div class="underline"></div>
+              <label for="">Password</label>
+             
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="input-data">
+              <input type="password" id="confirm_password" name="confirm_password" required>
+              <div class="underline"></div>
+              <label for="">Confirm Password</label>
+              
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="input-data textarea">
+              <textarea name="goal" rows="8" cols="80" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">What is your goal when entering the site?</label>
+            </div>
+          </div>
+    
+          <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="submit" value="Submit">
+            </div>
+          </div>
+    
+        </form>
+    
+      </div>
+    
+      <script>
+        // Toggle Password Visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('password');
+        togglePassword.addEventListener('click', function() {
+          const type = passwordField.type === 'password' ? 'text' : 'password';
+          passwordField.type = type;
+          // Change the icon
+          togglePassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+    
+        // Toggle Confirm Password Visibility
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const confirmPasswordField = document.getElementById('confirm_password');
+        toggleConfirmPassword.addEventListener('click', function() {
+          const type = confirmPasswordField.type === 'password' ? 'text' : 'password';
+          confirmPasswordField.type = type;
+          // Change the icon
+          toggleConfirmPassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+      </script>
+      
+    </body>
+    </html>
+    
+    
+</body>
+</html>

@@ -1,0 +1,368 @@
+/* From Uiverse.io by satyamchaudharydev */
+/* استيراد الخط من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* تعيين تنسيق أساسي للصفحة */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00000037;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* الشريط المتحرك */
+.loader {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 126, 243, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: #00BFFF;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* الخلفية السوداء عند تحميل الصفحة */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0707;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* تنسيق الـ header */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 18px;
+  color: #00BFFF; /* اللون الأزرق الفاتح */
+  padding: 10px;
+  font-weight: 500;
+  position: relative;
+  transition: none;
+}
+
+/* التوهج الأزرق الفاتح للنصوص */
+#login, #signup, #about {
+  color: #00BFFF; /* تلوين النص باللون الأزرق الفاتح */
+  text-shadow: 0 0 8px #00BFFF, 0 0 20px #00BFFF; /* تأثير التوهج الأزرق */
+}
+
+/* تأثير التوهج عند التمرير على النصوص */
+#login:hover, #signup:hover, #about:hover {
+  color: #00BFFF; /* تأكيد بقاء اللون الأزرق الفاتح */
+  text-shadow: 
+    0 0 10px #00BFFF,  /* توهج حول النص */
+    0 0 20px #00BFFF,  /* توهج قوي */
+    0 0 30px #00BFFF,  /* توهج أقوى */
+    0 0 40px #00BFFF;  /* أقوى توهج */
+}
+
+/* التأثير عند التمرير */
+#login:hover, #signup:hover, #about:hover {
+  transition: text-shadow 0.3s ease; /* تأثير التغيير الناعم للتوهج */
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 10px;
+    left: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-item {
+    font-size: 16px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #f0f0f0; /* خلفية محايدة */
+}
+
+.container {
+  max-width: 600px; /* تقليص العرض */
+  width: 100%;
+  padding: 25px 30px 15px 30px; /* تقليص المسافات الداخلية */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.05); /* خلفية شفافة للنموذج */
+  backdrop-filter: blur(8px); /* تأثير الضبابية على الخلفية */
+  border-radius: 10px;
+}
+
+.container .text {
+  text-align: center;
+  font-size: 32px; /* تقليص حجم الخط */
+  font-weight: 600;
+  color: rgba(11, 176, 217, 0.667); /* تلوين النص باللون الأزرق الفاتح */
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(86, 216, 228, 0.6); /* إضافة توهج للنص */
+}
+
+.container form {
+  padding: 20px 0 0 0;
+}
+
+.container form .form-row {
+  display: flex;
+  margin: 18px 0; /* تقليص المسافة بين الأعمدة */
+}
+
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+
+form .form-row .textarea {
+  height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid #08aa; /* إزالة اللون الأزرق في الحواف */
+  background-color: transparent; /* خلفية شفافة داخل الحقول */
+  color: #ffffff; /* تلوين النص باللون الأزرق الفاتح */
+  transition: all 0.3s ease;
+}
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #efefef; /* اللون الأزرق الفاتح */
+}
+
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #ccc; /* إزالة اللون الأزرق في الحواف */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}
+
+.input-data input:focus,
+.textarea textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #08aa; /* توهج عند التركيز باللون الأزرق الفاتح */
+  border-bottom-color:#08aa; /* تغيير لون الحافة أثناء التفاعل */
+}
+
+/* إضافة تأثير التوهج للأيقونة عند التمرير */
+.input-data .password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #08aa; /* تغيير لون الأيقونة */
+  transition: color 0.3s ease;
+}
+
+.input-data .password-icon:hover {
+  color: #00BFFF; /* تأثير التوهج عند التمرير */
+}
+
+/* التأثير على جملة "What is your goal when entering the site?" */
+.container .goal-text {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05); /* خلفية شفافة */
+}
+
+.container .goal-text:hover {
+  color: #00BFFF;
+  text-shadow: 0 0 8px #00BFFF, 0 0 20px #00BFFF;
+  cursor: pointer;
+}
+
+/* التعديل على الزر Submit لجعله شفافًا ويتوهج باللون الأزرق الفاتح */
+.submit-btn .input-data {
+  overflow: hidden;
+  height: 45px !important;
+  width: 100% !important; /* تكبير الزر ليغطي العرض الكامل */
+}
+
+.submit-btn .input-data .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #021213, #063e4d, #06575e, #010607);
+  transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner {
+  left: 0;
+}
+
+.submit-btn .input-data input {
+  background: transparent; /* جعل الزر شفافًا */
+  border: none; /* إزالة الحدود */
+  color:#08aa; /* نص باللون الأزرق الفاتح */
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 8px 2px rgba(6, 148, 209, 0.7); /* توهج عند التفاعل باللون الأزرق الفاتح */
+  transition: all 0.3s ease;
+}
+
+.submit-btn .input-data input:hover {
+  background:rgba(6, 148, 209, 0.7); /* تغيير اللون إلى الأزرق الفاتح عند التمرير */
+  color: white; /* تغيير النص إلى اللون الأبيض عند التمرير */
+  box-shadow: 0 0 12px 3px #08aa; /* توهج قوي عند المرور */
+}
+
+.submit-btn .input-data input::placeholder {
+  color: #08aa; /* تلوين النص في الـ placeholder بالأزرق الفاتح */
+}
+
+@media (max-width: 700px) {
+  .container .text {
+    font-size: 28px; /* تقليص حجم الخط في الشاشات الصغيرة */
+  }
+
+  .container form {
+    padding: 10px 0 0 0;
+  }
+
+  .container form .form-row {
+    display: block;
+  }
+
+  form .form-row .input-data {
+    margin: 20px 0 !important;
+  }
+
+  .submit-btn .input-data {
+    width: 100% !important;
+  }
+}

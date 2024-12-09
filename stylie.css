@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/scc2?family=Poppins;wght@300;400;500;600;700;800;900%display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-seif;
+
+}
+
+body {
+ 
+    clear: #000000;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px  10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+ 
+}
+
+.logo {
+    position: relative;
+   font-size: 25px;
+   color: #20153a;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s eases forwards;
+    animation-delay: .4s;
+
+}
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}   
+
+.navbar a:hover,
+.navbar a.active{
+     color: #00abf0;
+}
+
+.Home {
+     height: 100vh;
+     background: url('home') no-repeat;
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: center; 
+     padding: 0 10%;
+}
+
+.Home-content {
+     max-width: 600px;
+
+    }
+.Home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.Home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: aqua;
+}
+
+.Home-content p {
+    font-size: 16px;
+    color: #000000;
+    margin: 20px 0 40px;
+}
+
+.Home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover:before {
+    width: 100%
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    clear: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:#00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 10%;
+    background: transparent;
+    border: 2px solid red;
+}
+ 
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .8;
+}
+
+
+/* KEYFAMES ANMIAION */
+
+@keyframes showRight {
+    100% {
+        width: 0;
+
+    }
+}
+
+
+
+
+/* تعيين إعدادات الصفحة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;  /* خلفية الصفحة سوداء */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* الجزء العلوي مع الروابط */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);  /* خلفية شفافة */
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(58, 77, 112, 0.7);  /* تأثير عند التمرير */
+}
+
+/* إخفاء المحتوى الأولي */
+.login-container, .signup-container {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تصميم صندوق تسجيل الدخول */
+.login-box {
+    background: #111;
+    width: 300px;
+    padding: 40px 40px;
+    box-shadow: 0px 0px 30px rgba(58, 77, 112, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #3a4d70;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* تأثيرات على العنوان */
+h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* تأثير دخول عند الكتابة */
+.textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(58, 77, 112, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.textbox input:focus {
+    border-color: #3a4d70;
+    box-shadow: 0px 0px 15px rgba(58, 77, 112, 1);
+}
+
+/* زر التسجيل */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3a4d70;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #6e7a9e;
+    transform: scale(1.05);
+}
+
+/* تأثيرات التوهج حول الصندوق */
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 20px rgba(58, 77, 112, 0.3);
+        border-color: #3a4d70;
+    }
+    100% {
+        box-shadow: 0px 0px 40px rgba(58, 77, 112, 1);
+        border-color: #3a4d70;
+    }
+}
+
+/* تأثيرات النص */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تنسيق الروابط */
+a {
+    color: #3a4d70;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #6e7a9e;
+}
+
