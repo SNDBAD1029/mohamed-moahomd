@@ -275,12 +275,12 @@ form .form-row .textarea {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #08aa; /* تغيير لون الأيقونة */
+  color: rgba(0, 179, 255, 0.667); /* تغيير لون الأيقونة */
   transition: color 0.3s ease;
 }
 
 .input-data .password-icon:hover {
-  color: #00BFFF; /* تأثير التوهج عند التمرير */
+  color: #00c3d5; /* تأثير التوهج عند التمرير */
 }
 
 /* التأثير على جملة "What is your goal when entering the site?" */
@@ -366,3 +366,173 @@ form .form-row .textarea {
     width: 100% !important;
   }
 }
+
+/* تنسيق الأزرار الاجتماعية */
+.social-login {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ddd;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  width: 200px;
+}
+
+.social-btn img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.social-btn:hover {
+  background-color: #00bfff;
+}
+
+.social-btn:active {
+  background-color: #005f7f;
+}
+/* تنسيق النموذج */
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 30px 15px 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  position: relative;
+}
+
+.container .text {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(11, 176, 217, 0.667);
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(86, 216, 228, 0.6);
+}
+
+/* تنسيق الأزرار الاجتماعية */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.social-btn {
+  width: 48%;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-btn i {
+  margin-right: 10px;
+}
+
+.social-btn.facebook {
+  background-color: #3b5998;
+  color: white;
+  border: none;
+}
+
+.social-btn.google {
+  background-color: #db4437;
+  color: white;
+  border: none;
+}
+
+.social-btn:hover {
+  opacity: 0.8;
+}
+
+/* تنسيق زر Submit */
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.submit-btn button {
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 2px solid #08aa;
+  color: #08aa;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 8px 2px rgba(6, 148, 209, 0.7);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+/* تأثير التمرير على زر Submit */
+.submit-btn button:hover {
+  background: rgba(6, 148, 209, 0.7);
+  color: white;
+  box-shadow: 0 0 12px 3px #08aa;
+}
+
+/* تأثير النقر على زر Submit */
+.submit-btn button:active {
+  background: #06575e;
+  box-shadow: 0 0 10px 2px #06575e;
+}
+
+/* تعطيل الزر */
+.submit-btn button:disabled {
+  background: rgba(6, 148, 209, 0.2);
+  color: rgba(6, 148, 209, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* تنسيق الأيقونة التي تظهر كلمة المرور */
+.password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #08aa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.password-icon:hover {
+  color: #00BFFF; /* التأثير عند التمرير */
+}
+
+/* تنسيق الحقل الذي يحتوي على كلمة المرور */
+.input-data {
+  position: relative;
+}
+
+.input-data input {
+  width: 100%;
+  height: 40px;
+  padding-right: 35px; /* مساحة لإظهار الأيقونة */
+}
+
+/* باقي التنسيقات كما هي */
