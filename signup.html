@@ -1,139 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>signup</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="تبع siginup.css"> <!-- ربط ملف الـ CSS -->
-</head>
-<body>
-  
-  <!-- الخلفية السوداء مع أيقونة التحميل -->
-  <div class="loading-container">
-    <div class="loader"></div> <!-- الأيقونة الجديدة -->
-  </div>
-
-
-   <!-- الـ Header مع القوائم -->
-   <div class="header">
+  <!-- الـ Header مع القوائم -->
+  <div class="header">
     <div class="menu">
+     
+      <div class="loading-container">
+        <div class="loader"></div> <!-- الأيقونة الجديدة -->
+      </div>
+    
+     
+     
       <a href="login.html" class="menu-item" id="login">Login</a>
       <a href="signup.html" class="menu-item" id="signup">Signup</a>
       <a href="about.html" class="menu-item" id="about">About</a>
     </div>
+  </div>
+ 
+  <!-- رابط مكتبة Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* تنسيق الأيقونة التي تظهر كلمة المرور */
+    .password-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #08aa;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
 
-    <head>
-      <!-- رابط مكتبة Font Awesome -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    </head>
+    .password-icon:hover {
+        color: #00BFFF; /* التأثير عند التمرير */
+    }
+
+    /* تنسيق الحقل الذي يحتوي على كلمة المرور */
+    .input-data {
+        position: relative;
+    }
+
+    .input-data input {
+        width: 100%;
+        height: 40px;
+        padding-right: 35px; /* مساحة لإظهار الأيقونة */
+    }
+
+    /* تنسيق الأزرار الاجتماعية */
+    .social-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 45px;
+        margin: 10px 0;
+        border: none;
+        background-color: #3b5998; /* اللون الأزرق لفيسبوك */
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .social-btn.google {
+        background-color: #db4437; /* اللون الأحمر لجوجل */
+    }
+
+    .social-btn:hover {
+        background-color: #3578e5; /* تأثير عند التمرير في فيسبوك */
+    }
+
+    .social-btn.google:hover {
+        background-color: #ea4335; /* تأثير عند التمرير في جوجل */
+    }
+
+    /* تنسيق زر Submit */
+    .submit-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .submit-btn button {
+        padding: 10px 20px;
+        background-color: #08aa;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-btn button:hover {
+        background-color: #00BFFF;
+    }
+
+    /* نقاط قوة كلمة المرور */
+    .password-strength {
+        display: flex;
+        justify-content: start;
+        margin-top: 5px;
+    }
+
+    .strength-point {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+        background-color: #ccc; /* لون افتراضي */
+    }
+    .strong { background-color: green; }
+    .medium { background-color: yellow; }
+    .weak { background-color: red; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text"> CREATE AN ACCOUNT</div>
     
-    <!DOCTYPE html>
-    <html lang="ar">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Sign Up</title>
-      <!-- ربط ملف CSS الخارجي -->
-      <link href="styles.css" rel="stylesheet" type="text/css">
-      <!-- رابط مكتبة Font Awesome للأيقونات -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    </head>
-    <body>
-    
-      <div class="container">
-    
-        <div class="text">
-          Sign up
+    <form action="#" method="POST" id="signup-form">
+      <div class="form-row">
+        <div class="input-data">
+          <input type="text" id="name" required>
+          <label for="name">your name</label>
         </div>
-    
-        <form action="server.js" method="POST">
-    
-          <div class="form-row">
-            <div class="input-data">
-              <input type="text" name="first_name" required>
-              <div class="underline"></div>
-              <label for="">Your first name</label>
-            </div>
-    
-            <div class="input-data">
-              <input type="text" name="second_name" required>
-              <div class="underline"></div>
-              <label for="">Your second name</label>
-            </div>
-          </div>
-    
-          <div class="form-row">
-            <div class="input-data">
-              <input type="email" name="email" required>
-              <div class="underline"></div>
-              <label for="">Write your email</label>
-            </div>
-          </div>
-    
-          <div class="form-row">
-            <div class="input-data">
-              <input type="password" id="password" name="password" required>
-              <div class="underline"></div>
-              <label for="">Password</label>
-             
-            </div>
-          </div>
-    
-          <div class="form-row">
-            <div class="input-data">
-              <input type="password" id="confirm_password" name="confirm_password" required>
-              <div class="underline"></div>
-              <label for="">Confirm Password</label>
-              
-            </div>
-          </div>
-    
-          <div class="form-row">
-            <div class="input-data textarea">
-              <textarea name="goal" rows="8" cols="80" required></textarea>
-              <br />
-              <div class="underline"></div>
-              <label for="">What is your goal when entering the site?</label>
-            </div>
-          </div>
-    
-          <div class="form-row submit-btn">
-            <div class="input-data">
-              <div class="inner"></div>
-              <input type="submit" value="Submit">
-            </div>
-          </div>
-    
-        </form>
-    
       </div>
-    
-      <script>
-        // Toggle Password Visibility
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordField = document.getElementById('password');
-        togglePassword.addEventListener('click', function() {
-          const type = passwordField.type === 'password' ? 'text' : 'password';
-          passwordField.type = type;
-          // Change the icon
-          togglePassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-        });
-    
-        // Toggle Confirm Password Visibility
-        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
-        const confirmPasswordField = document.getElementById('confirm_password');
-        toggleConfirmPassword.addEventListener('click', function() {
-          const type = confirmPasswordField.type === 'password' ? 'text' : 'password';
-          confirmPasswordField.type = type;
-          // Change the icon
-          toggleConfirmPassword.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-        });
-      </script>
-      
-    </body>
-    </html>
-    
-    
+      <div class="form-row">
+        <div class="input-data">
+          <input type="email" id="email" required>
+          <label for="email"> Email</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-data">
+          <input type="password" id="password" required>
+          <label for="password"> password</label>
+          <i class="fas fa-eye password-icon" id="toggle-password"></i>
+          <!-- نقاط قوة كلمة المرور -->
+          <div class="password-strength">
+            <div id="point-1" class="strength-point"></div>
+            <div id="point-2" class="strength-point"></div>
+            <div id="point-3" class="strength-point"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-data">
+          <input type="password" id="confirm-password" required>
+          <label for="confirm-password"> Confirm password</label>
+          <i class="fas fa-eye password-icon" id="toggle-confirm-password"></i>
+        </div>
+      </div>
+
+      <!-- أيقونات تسجيل الدخول عبر فيسبوك وجوجل -->
+      <div class="social-login">
+        <button type="button" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i>   Log in via Facebook 
+        </button>
+        <button type="button" class="social-btn google">
+          <i class="fab fa-google"></i>  Log in via Google
+        </button>
+      </div>
+
+      <!-- زر Submit في الأسفل -->
+      <div class="submit-btn">
+        <button type="submit" id="submit-button" disabled> Create an account</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- إضافة كود JavaScript لتفعيل خاصية إظهار كلمة المرور -->
+  <script>
+    // التبديل بين إظهار وإخفاء كلمة المرور
+    document.getElementById('toggle-password').addEventListener('click', function() {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = type;
+    });
+
+    document.getElementById('toggle-confirm-password').addEventListener('click', function() {
+      const confirmPasswordField = document.getElementById('confirm-password');
+      const type = confirmPasswordField.type === 'password' ? 'text' : 'password';
+      confirmPasswordField.type = type;
+    });
+
+    // دالة لتحديد قوة كلمة المرور
+    function checkPasswordStrength(password) {
+      const points = [document.getElementById('point-1'), document.getElementById('point-2'), document.getElementById('point-3')];
+      let strength = 0;
+      const regexWeak = /^(?=.*[a-z]).{6,}$/; // كلمة مرور ضعيفة
+      const regexMedium = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; // كلمة مرور متوسطة
+      const regexStrong = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{10,}$/; // كلمة مرور قوية
+
+      if (regexStrong.test(password)) {
+        strength = 3;
+      } else if (regexMedium.test(password)) {
+        strength = 2;
+      } else if (regexWeak.test(password)) {
+        strength = 1;
+      }
+
+      points.forEach((point, index) => {
+        point.classList.remove('strong', 'medium', 'weak');
+        if (index < strength) {
+          if (strength === 3) {
+            point.classList.add('strong');
+          } else if (strength === 2) {
+            point.classList.add('medium');
+          } else {
+            point.classList.add('weak');
+          }
+        }
+      });
+    }
+
+    // حدث التغيير في كلمة المرور
+    document.getElementById('password').addEventListener('input', function() {
+      const password = this.value;
+      checkPasswordStrength(password);
+    });
+
+    // التحقق من تطابق كلمة المرور
+    document.getElementById('confirm-password').addEventListener('input', function() {
+      const password = document.getElementById('password').value;
+      const confirmPassword = this.value;
+      const submitButton = document.getElementById('submit-button');
+      if (password === confirmPassword && password.length >= 6) {
+        submitButton.disabled = false;
+      } else {
+        submitButton.disabled = true;
+      }
+    });
+
+    // عند تقديم النموذج (زر Submit)
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // الانتقال إلى صفحة جديدة (هنا ستكون صفحة النجاح)
+      window.location.href = 'success.html'; // هنا ستضع الرابط لصفحة النجاح الخاصة بك
+    });
+  </script>
 </body>
 </html>
