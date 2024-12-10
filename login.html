@@ -3,29 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
-  <link rel="stylesheet" href="login.css"> <!-- ملف الـ CSS الخاص بك -->
-  <link rel="stylesheet" href="gava.js">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="gava.js"></script>
 </head>
 <body>
-  
-    <div class="sidebar">
-       
-        <div><p class="sidebar-text">مرحبا بك صديقي </p></div>
-       
-        <p class="sidebar-text">Hover over the bar to see more text!</p>
-        <p class="sidebar-text">This is a test of the sliding effect.</p>
-        <p class="sidebar-text">Enjoy the glowing animation!</p>
-        
-    </div>
-
- 
- 
-    <!-- الخلفية السوداء مع أيقونة التحميل -->
+  <!-- الخلفية مع شريط التحميل -->
   <div class="loading-container">
     <div class="loader"></div> <!-- الأيقونة الجديدة -->
   </div>
-  <script src="gava.js"></script>
+
   <!-- الـ Header مع القوائم -->
   <div class="header">
     <div class="menu">
@@ -33,20 +20,253 @@
       <a href="signup.html" class="menu-item" id="signup">Signup</a>
       <a href="about.html" class="menu-item" id="about">About</a>
     </div>
-    <div class="login-container">
-      <form class="login-form">
-        <h2>تسجيل الدخول</h2>
-        <div class="input-group">
-          <label for="username">اسم المستخدم</label>
-          <input type="text" id="username" placeholder="ادخل اسم المستخدم">
-        </div>
-        <div class="input-group">
-          <label for="password">كلمة المرور</label>
-          <input type="password" id="password" placeholder="ادخل كلمة المرور">
-        </div>
-        <button type="submit" class="login-btn">تسجيل الدخول</button>
-      </form>
-    </div>
-              
+  </div>
+
+     <!-- استيراد الخط من جوجل -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+     <!-- استيراد Font Awesome للأيقونات -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+ 
+     <style>
+         /* تعيين تنسيق أساسي للصفحة */
+         body {
+             font-family: 'Poppins', sans-serif;
+             margin: 0;
+             padding: 0;
+             background-color: #00000037;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: relative;
+             background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+             background-size: cover;
+             background-position: center;
+             background-attachment: fixed;
+             background-repeat: no-repeat;
+         }
+ 
+         /* تنسيق النموذج */
+         .container {
+             max-width: 600px;
+             width: 100%;
+             padding: 25px 30px 15px 30px;
+             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+             background-color: rgba(255, 255, 255, 0.05);
+             backdrop-filter: blur(8px);
+             border-radius: 10px;
+             position: relative;
+         }
+ 
+         .container .text {
+             text-align: center;
+             font-size: 32px;
+             font-weight: 600;
+             color: rgba(11, 176, 217, 0.667);
+             margin-bottom: 20px;
+             text-shadow: 0 0 5px rgba(86, 216, 228, 0.6);
+         }
+ 
+         /* تنسيق الحقل */
+         .form-row {
+             display: flex;
+             margin: 18px 0;
+         }
+ 
+         .input-data {
+             width: 100%;
+             height: 40px;
+             margin: 0 20px;
+             position: relative;
+         }
+ 
+         .input-data input {
+             display: block;
+             width: 100%;
+             height: 100%;
+             border: none;
+             font-size: 17px;
+             background-color: transparent;
+             color: #ffffff;
+             border-bottom: 2px solid #08aa;
+             transition: all 0.3s ease;
+         }
+ 
+         .input-data input:focus {
+             outline: none;
+             box-shadow: 0 0 8px 2px #08aa;
+             border-bottom-color: #08aa;
+         }
+ 
+         .input-data label {
+             position: absolute;
+             pointer-events: none;
+             bottom: 10px;
+             font-size: 16px;
+             transition: all 0.3s ease;
+         }
+ 
+         .input-data input:focus ~ label,
+         .input-data input:valid ~ label {
+             transform: translateY(-20px);
+             font-size: 14px;
+             color: #efefef;
+         }
+ 
+         .password-icon {
+             position: absolute;
+             right: 10px;
+             top: 50%;
+             transform: translateY(-50%);
+             color: #08aa;
+             cursor: pointer;
+             transition: color 0.3s ease;
+         }
+ 
+         .password-icon:hover {
+             color: #00BFFF;
+         }
+ 
+         /* تنسيق الزر */
+         .submit-btn {
+             display: flex;
+             justify-content: center;
+             margin-top: 30px;
+         }
+ 
+         .submit-btn button {
+             padding: 15px 30px;
+             background-color: transparent;
+             border: 2px solid #08aa;
+             color: #08aa;
+             font-size: 18px;
+             font-weight: 500;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+             cursor: pointer;
+             position: relative;
+             z-index: 2;
+             box-shadow: 0 0 8px 2px rgba(6, 148, 209, 0.7);
+             transition: all 0.3s ease;
+             border-radius: 5px;
+         }
+ 
+         .submit-btn button:hover {
+             background: rgba(6, 135, 209, 0.7);
+             color: white;
+             box-shadow: 0 0 12px 3px #08aa;
+         }
+ 
+         /* تنسيق روابط */
+         .container .text a {
+             color: rgba(7, 152, 172, 0.875);
+             text-decoration: none;
+             font-weight: 600;
+             position: relative;
+             transition: all 0.3s ease;
+             font-size: 14px; /* تصغير حجم النص هنا */
+         }
+ 
+         .container .text a:hover {
+             color: #00BFFF;
+         }
+ 
+         /* إضافة تأثير توهج عند تحويم الماوس */
+         .container .text a::after {
+             content: '';
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             width: 100%;
+             height: 2px;
+             background: #00BFFF;
+             transform: scaleX(0);
+             transform-origin: bottom right;
+             transition: transform 0.3s ease;
+         }
+ 
+         .container .text a:hover::after {
+             transform: scaleX(1);
+             transform-origin: bottom left;
+         }
+ 
+         /* شريط متحرك أسفل الزر */
+         .animated-bar {
+             width: 100%;
+             height: 10px;
+             margin-top: 10px;
+             background: linear-gradient(90deg, rgb(0, 136, 170), #00aeff, #0493d6d7, rgba(3, 101, 192, 0.884));
+             background-size: 200% 100%;
+             animation: moveBar 3s infinite linear;
+         }
+ 
+         /* تأثير حركة الشريط */
+         @keyframes moveBar {
+             0% {
+                 background-position: 200% 0;
+             }
+             100% {
+                 background-position: -200% 0;
+             }
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <div class="container">
+         <div class="text">LOGIN </div>
+         <form action="#" method="POST">
+             <!-- حقل البريد الإلكتروني -->
+             <div class="form-row">
+                 <div class="input-data">
+                     <input type="email" name="email" required id="email">
+                     <label> Email</label>
+                 </div>
+             </div>
+ 
+             <!-- حقل كلمة المرور مع أيقونة إظهار/إخفاء كلمة المرور -->
+             <div class="form-row">
+                 <div class="input-data">
+                     <input type="password" name="password" required id="password">
+                     <label> Passowrd</label>
+                     <span class="password-icon" onclick="togglePassword()">
+                         <i class="fas fa-eye"></i> <!-- أيقونة عرض كلمة المرور -->
+                     </span>
+                 </div>
+             </div>
+ 
+             <!-- زر تسجيل الدخول -->
+             <div class="submit-btn">
+                 <button type="submit">Login </button>
+             </div>
+         </form>
+  
+         <div class="text">
+             <p>You No Acouent<a href="signup.html"> Creted Acouent.....</a></p> <!-- تم تصغير النص هنا -->
+         </div>
+ 
+         <!-- شريط متحرك أسفل الزر -->
+         <div class="animated-bar"></div>
+     </div>
+ 
+     <!-- إضافة جافا سكربت لإظهار/إخفاء كلمة المرور -->
+     <script>
+         function togglePassword() {
+             var passwordField = document.getElementById('password');
+             var passwordIcon = document.querySelector('.password-icon i');
+             
+             if (passwordField.type === 'password') {
+                 passwordField.type = 'text';
+                 passwordIcon.classList.remove('fa-eye');
+                 passwordIcon.classList.add('fa-eye-slash');
+             } else {
+                 passwordField.type = 'password';
+                 passwordIcon.classList.remove('fa-eye-slash');
+                 passwordIcon.classList.add('fa-eye');
+             }
+         }
+     </script>
+ 
 </body>
 </html>
